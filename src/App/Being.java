@@ -1,5 +1,8 @@
 package App;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -14,21 +17,31 @@ public class Being <T> extends Entity {
 
         Culture = culture;
 
+        Scanner scan = null;
 
-        Scanner scan = new Scanner("Smith, Johnson,Williams,Brown,Jones,Miller,Davis,Garcia,Rodriguez");
+        try {
+            scan = new Scanner(new BufferedReader(new FileReader("C:\\Users\\samuelluther\\Documents\\Galaxy\\src\\App\\name.txt")));
+            scan.useDelimiter(",\\s*");
+    
+            int n = r.nextInt(3000)+1;
+    
+            String name = "";
+    
+            for(int i = 0; i < n; i++){
+                name = scan.next();
+                name = name.replace("\"", "");
+            }
+    
+            System.out.println(Culture.getClass().getName() + " named " + name);
 
-        scan.useDelimiter(",\\s*");
-
-        int n = r.nextInt(9)+1;
-
-        String name = "";
-
-        for(int i = 0; i < n; i++){
-            name = scan.next();
+        } catch (Exception e) {
+            
+        }
+        finally{
+            scan.close();
         }
 
 
 
-        System.out.println(Culture.getClass().getName() + " named " + name);
     }
 }

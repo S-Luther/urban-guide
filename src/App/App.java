@@ -1,5 +1,6 @@
 package App;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -15,7 +16,7 @@ import Cultures.Viltrumites;
 
 public class App {
     static ArrayList<SpaceStation> Stations = new ArrayList<>();
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args){
 
         boolean go = true;
         int counter = 0;
