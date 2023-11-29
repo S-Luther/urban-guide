@@ -20,7 +20,7 @@ public class Being <T> extends Entity {
         Scanner scan = null;
 
         try {
-            scan = new Scanner(new BufferedReader(new FileReader("C:\\Users\\samuelluther\\Documents\\Galaxy\\src\\App\\name.txt")));
+            scan = new Scanner(new BufferedReader(new FileReader("src\\App\\name.txt")));
             scan.useDelimiter(",\\s*");
     
             int n = r.nextInt(3000)+1;
