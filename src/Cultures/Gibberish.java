@@ -26,5 +26,10 @@ public class Gibberish implements Culture{
     public void special(){
         System.out.println("Arghhh!");
     }
+
+    public String name(){
+        return "Gibberish";
+        
+    }
     
 }

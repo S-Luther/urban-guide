@@ -24,4 +24,8 @@ public class Rakis implements Culture{
     public void special(){
         
     }
+
+    public String name(){
+        return "Rakis";
+    }
 }

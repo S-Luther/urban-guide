@@ -9,4 +9,5 @@ public interface Culture {
     stance strategy();
     stance diplomacy();
     void special();
+    String name();
 }

@@ -28,7 +28,7 @@ public class SpaceStation <T> {
 
     public SpaceStation(T culture){
         Culture = culture;
-        System.out.println("A Station of Culture: "+Culture.getClass().getName()+" has been created!");
+        System.out.println("A Station of Culture: "+((Culture) Culture).name()+" has been created!");
         System.out.println("//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
         int rand = r.nextInt(50) + 10;
 
@@ -38,18 +38,32 @@ public class SpaceStation <T> {
             switch(r.nextInt(7)){
                 case 0:
                     citizens.add(new Being<Klingon>(new Klingon()));
+                    break;
+
                 case 1:
                     citizens.add(new Being<Jedi>(new Jedi()));
+                    break;
+
                 case 2:
                     citizens.add(new Being<HermitCrabPeople>(new HermitCrabPeople()));
+                    break;
+
                 case 3:    
                     citizens.add(new Being<Rakis>(new Rakis()));
+                    break;
+
                 case 4:
                     citizens.add(new Being<Gibberish>(new Gibberish()));
+                    break;
+
                 case 5:
                     citizens.add(new Being<Space>(new Space()));
+                    break;
+
                 case 6:
                     citizens.add(new Being<Viltrumites>(new Viltrumites()));
+                    break;
+
             }
         }
 
@@ -57,12 +71,14 @@ public class SpaceStation <T> {
 
     }
 
-    private void challenge(stance s){
-
+    public void simulate(){
+        for(Being b: citizens){
+            b.interact(citizens.get(r.nextInt(citizens.size())));
+        }
     }
+
 
     public stance respond(){
         return null;
     }
 }
-//woohoo!

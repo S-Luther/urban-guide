@@ -23,4 +23,8 @@ public class Space implements Culture{
     public void special(){
         System.out.println("Mwahahahahaha");
     }
+
+    public String name(){
+        return "Space";
+    }
 }

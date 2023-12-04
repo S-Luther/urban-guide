@@ -18,11 +18,14 @@ public class HermitCrabPeople implements Culture {
         } else {
             return stance.BALANCED;
         }
-        
     }
 
     public void special(){
         System.out.println("Quick! Hide in your shell!");
+    }
+
+    public String name(){
+        return "Hermit Crab People";
     }
 
 }

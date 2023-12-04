@@ -22,7 +22,11 @@ public class Centaurians implements Culture{
     }
 
     public void special(){
-        System.out.println("Keep your distance!");
+        System.out.println("Back off!");
+    }
+
+     public String name(){
+        return "Centaurians";
     }
     
 }

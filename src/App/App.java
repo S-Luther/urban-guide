@@ -23,29 +23,50 @@ public class App {
 
         Random r = new Random(1);
 
-        while(go){
-
+        for(int i = 0; i<2; i++){
             switch(r.nextInt(7)){
                 case 0:
                     Stations.add(new SpaceStation<Klingon>(new Klingon()));
+                    break;
+
                 case 1:
                     Stations.add(new SpaceStation<Jedi>(new Jedi()));
+                    break;
+
                 case 2:
                     Stations.add(new SpaceStation<HermitCrabPeople>(new HermitCrabPeople()));
+                    break;
+
                 case 3:    
                     Stations.add(new SpaceStation<Rakis>(new Rakis()));
+                    break;
+
                 case 4:
                     Stations.add(new SpaceStation<Gibberish>(new Gibberish()));
+                    break;
+
                 case 5:
                     Stations.add(new SpaceStation<Space>(new Space()));
+                    break;
+
                 case 6:
                     Stations.add(new SpaceStation<Viltrumites>(new Viltrumites()));
+                    break;
+
             }
 
+  
+        }
+
+        while(go){
+            for(SpaceStation s: Stations){
+                s.simulate();
+            }
             counter++;
             if(counter==10){
                 go = false;
             }
+
         }
         
     }

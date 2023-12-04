@@ -25,4 +25,11 @@ public class Viltrumites implements Culture{
     public void special(){
         
     }
+    
+    public String name(){
+        return "Viltrumites";
+    }
 }
+
+
+

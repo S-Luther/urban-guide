@@ -29,4 +29,9 @@ public class Jedi implements Culture{
     public void special(){
         System.out.println("These are not the droids you're looking for");
     }
+
+    public String name(){
+        return "Jedi";
+    }
+
 }

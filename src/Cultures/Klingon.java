@@ -24,5 +24,9 @@ public class Klingon implements Culture{
     public void special(){
         System.out.println("We need blood!");
     }
+
+    public String name(){
+        return "Klingon";
+    }
     
 }
